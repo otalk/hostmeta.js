@@ -1,4 +1,12 @@
 # getHostMeta
+**Fetch and parse .well-known/host-meta**
+
+[![Build Status](https://travis-ci.org/legastero/hostmeta.js.png)](https://travis-ci.org/legastero/hostmeta.js)
+[![Dependency Status](https://david-dm.org/legastero/hostmeta.js.png)](https://david-dm.org/legastero/hostmeta.js)
+[![devDependency Status](https://david-dm.org/legastero/hostmeta.js/dev-status.png)](https://david-dm.org/legastero/hostmeta.js#info=devDependencies)
+
+[![Browser Support](https://ci.testling.com/legastero/hostmeta.js.png)](https://ci.testling.com/legastero/hostmeta.js)
+
 
 ## What is this?
 
@@ -12,9 +20,16 @@ If you're not using browserify or you want AMD support use `getusermedia.bundle.
 ## Installing
 
 ```
-npm install hostmeta
+$ npm install hostmeta
 ```
 
+## Building bundled/minified version (for AMD, etc)
+
+```sh
+$ grunt
+```
+
+The bundled and minified files will be in the generated `build` directory.
 
 ## How to use it
 
@@ -30,7 +45,7 @@ getHostMeta('example.com', function (err, data) {
     // {
     //   "links": [
     //     {
-    //       "rel": "urn:xmpp:altconnect:websocket",
+    //       "rel": "urn:xmpp:alt-connections:websocket",
     //       "href': "wss://example.com:5281/xmpp-websocket"
     //     },
     //     {
