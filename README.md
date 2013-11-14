@@ -12,11 +12,6 @@
 
 A browser module for looking up metadata about a host, using the `/.well-known/host-meta[.json]` files, which is useful for discovering associated services for a host, such as an OpenID endpoint or where to connect for an XMPP BOSH/WebSocket session.
 
-Suitable for use with browserify/CommonJS on the client. 
-
-If you're not using browserify or you want AMD support use `getusermedia.bundle.js`.
-
-
 ## Installing
 
 ```
