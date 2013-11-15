@@ -5,21 +5,21 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         browserify: {
             options: {
-                standalone: 'getHostMeta'
+                standalone: 'get<%= pkg.name %>'
             },
             dist: {
                 files: {
-                    'build/hostmeta.bundle.js': ['<%= pkg.main %>']
+                    'build/<%= pkg.name %>.bundle.js': ['<%= pkg.main %>']
                 }
             }
         },
         uglify: {
             options: {
-                banner: '/*! hostmeta <%= grunt.template.today("yyyy-mm-dd") %>'
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %>'
             },
             dist: {
                 files: {
-                    'build/hostmeta.bundle.min.js': ['build/hostmeta.bundle.js']
+                    'build/<%= pkg.name %>.bundle.min.js': ['build/<%= pkg.name %>.bundle.js']
                 }
             }
         },
