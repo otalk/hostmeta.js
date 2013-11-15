@@ -28,7 +28,7 @@ The bundled and minified files will be in the generated `build` directory.
 
 ## How to use it
 
-```
+```js
 var getHostMeta = require('hostmeta');
 
 getHostMeta('example.com', function (err, data) {
