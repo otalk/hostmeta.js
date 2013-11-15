@@ -105,9 +105,7 @@ test('retrieve XRD only', function (t) {
 });
 
 test('retrieve either', function (t) {
-    getHostMeta({
-        host: 'lance.im',
-    }, function (err, hostmeta) {
+    getHostMeta('lance.im', function (err, hostmeta) {
         t.ok(hostmeta.links.length > 0);
         t.end();
     });

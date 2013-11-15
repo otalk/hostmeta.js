@@ -1,9 +1,8 @@
 {
     "name": "hostmeta",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Easily retrieve and parse a host's .well-known/host-meta file",
     "main": "index.js",
-    "browserify": "index.js",
     "keywords": [
         "well-known",
         "host-meta",

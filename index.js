@@ -9,6 +9,8 @@ var XRD = require('./lib/xrd');
 
 
 module.exports = function (opts, cb) {
+    if (!cb) return;
+
     if (typeof opts === 'string') {
         opts = {host: opts};
     }
