@@ -84,7 +84,7 @@ test('retrieve JSON only', function (t) {
         json: true,
         xrd: false
     }, function (err, hostmeta) {
-        t.equal(err, false);
+        t.notOk(err);
         t.ok(hostmeta.links.length > 0);
         t.end();
     });
@@ -98,7 +98,7 @@ test('retrieve XRD only', function (t) {
         json: false,
         xrd: true
     }, function (err, hostmeta) {
-        t.equal(err, false);
+        t.notOk(err);
         t.ok(hostmeta.links.length > 0);
         t.end();
     });
