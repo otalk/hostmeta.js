@@ -28,7 +28,7 @@ module.exports = function (opts, cb) {
 
     var getXRD = new Promise(function (resolve, reject) {
         request(scheme + opts.host + '/.well-known/host-meta').spread(function (req, body) {
-            var xrd = jxt.parse(XRD, body, 'application/xml');
+            var xrd = jxt.parse(body, XRD);
             resolve(xrd.toJSON());
         }).catch(reject);
     });
