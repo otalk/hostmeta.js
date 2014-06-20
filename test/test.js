@@ -67,7 +67,7 @@ var json = {
 test('XRD', function (t) {
     t.plan(4);
 
-    var xrd = jxt.parse(xml, XRD);
+    var xrd = jxt.parse(xml, XRD).toJSON();
 
     t.equal(xrd.subject, json.subject);
     t.deepEqual(xrd.expires, new Date(json.expires));
