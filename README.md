@@ -1,11 +1,11 @@
 # getHostMeta
 **Fetch and parse .well-known/host-meta**
 
-[![Build Status](https://travis-ci.org/legastero/hostmeta.js.png)](https://travis-ci.org/legastero/hostmeta.js)
-[![Dependency Status](https://david-dm.org/legastero/hostmeta.js.png)](https://david-dm.org/legastero/hostmeta.js)
-[![devDependency Status](https://david-dm.org/legastero/hostmeta.js/dev-status.png)](https://david-dm.org/legastero/hostmeta.js#info=devDependencies)
+[![Build Status](https://travis-ci.org/otalk/hostmeta.js.png)](https://travis-ci.org/otalk/hostmeta.js)
+[![Dependency Status](https://david-dm.org/otalk/hostmeta.js.png)](https://david-dm.org/otalk/hostmeta.js)
+[![devDependency Status](https://david-dm.org/otalk/hostmeta.js/dev-status.png)](https://david-dm.org/otalk/hostmeta.js#info=devDependencies)
 
-[![Browser Support](https://ci.testling.com/legastero/hostmeta.js.png)](https://ci.testling.com/legastero/hostmeta.js)
+[![Browser Support](https://ci.testling.com/otalk/hostmeta.js.png)](https://ci.testling.com/otalk/hostmeta.js)
 
 
 ## What is this?

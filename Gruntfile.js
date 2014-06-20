@@ -5,7 +5,9 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         browserify: {
             options: {
-                standalone: 'getHostMeta'
+                bundleOptions: {
+                    standalone: 'getHostMeta'
+                }
             },
             dist: {
                 files: {

@@ -13,10 +13,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/legastero/hostmeta.js.git"
+    "url": "https://github.com/otalk/hostmeta.js.git"
   },
   "license": "MIT",
-  "bugs": "https://github.com/legastero/hostmeta.js/issues",
+  "bugs": "https://github.com/otalk/hostmeta.js/issues",
   "browser": {
     "request": "browser-request"
   },
