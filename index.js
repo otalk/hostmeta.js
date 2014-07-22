@@ -1,6 +1,5 @@
 'use strict';
 
-var _ = require('underscore');
 var Promise = require('bluebird');
 var request = Promise.promisify(require('request'));
 
@@ -12,22 +11,27 @@ module.exports = function (opts, cb) {
     if (typeof opts === 'string') {
         opts = {host: opts};
     }
-    opts = _.extend({
+
+    var config = {
         ssl: true,
         json: true,
         xrd: true
-    }, opts);
+    };
 
-    var scheme = opts.ssl ? 'https://' : 'http://';
+    for (var prop in opts) {
+        config[prop] = opts[prop];
+    }
+
+    var scheme = config.ssl ? 'https://' : 'http://';
 
     var getJSON = new Promise(function (resolve, reject) {
-        request(scheme + opts.host + '/.well-known/host-meta.json').spread(function (req, body) {
+        request(scheme + config.host + '/.well-known/host-meta.json').spread(function (req, body) {
             resolve(JSON.parse(body));
         }).catch(reject);
     });
 
     var getXRD = new Promise(function (resolve, reject) {
-        request(scheme + opts.host + '/.well-known/host-meta').spread(function (req, body) {
+        request(scheme + config.host + '/.well-known/host-meta').spread(function (req, body) {
             var xrd = jxt.parse(body, XRD);
             resolve(xrd.toJSON());
         }).catch(reject);

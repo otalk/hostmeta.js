@@ -21,8 +21,7 @@
     "request": "browser-request"
   },
   "dependencies": {
-    "jxt": "^1.0.0",
-    "underscore": "^1.6.0",
+    "jxt": "^1.5.1",
     "request": "^2.34.0",
     "browser-request": "0.3.1",
     "bluebird": "^1.2.0"
