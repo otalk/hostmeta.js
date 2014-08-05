@@ -1,9 +1,9 @@
 'use strict';
 
 var test = require('tape');
-var jxt = require('jxt');
+var JXT = require('jxt').createRegistry();
 
-var XRD = require('../lib/xrd');
+var XRD = JXT.use(require('../lib/xrd'));
 var getHostMeta = require('../index');
 
 
@@ -67,7 +67,7 @@ var json = {
 test('XRD', function (t) {
     t.plan(4);
 
-    var xrd = jxt.parse(xml, XRD).toJSON();
+    var xrd = JXT.parse(xml, XRD).toJSON();
 
     t.equal(xrd.subject, json.subject);
     t.deepEqual(xrd.expires, new Date(json.expires));

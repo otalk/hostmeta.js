@@ -3,8 +3,9 @@
 var Promise = require('bluebird');
 var request = Promise.promisify(require('request'));
 
-var jxt = require('jxt');
-var XRD = require('./lib/xrd');
+var JXT = require('jxt').createRegistry();
+
+JXT.use(require('./lib/xrd'));
 
 
 module.exports = function (opts, cb) {
@@ -32,7 +33,7 @@ module.exports = function (opts, cb) {
 
     var getXRD = new Promise(function (resolve, reject) {
         request(scheme + config.host + '/.well-known/host-meta').spread(function (req, body) {
-            var xrd = jxt.parse(body, XRD);
+            var xrd = JXT.parse(body);
             resolve(xrd.toJSON());
         }).catch(reject);
     });
