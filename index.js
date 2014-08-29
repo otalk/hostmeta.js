@@ -1,7 +1,7 @@
 'use strict';
 
-var Promise = require('bluebird');
-var request = Promise.promisify(require('request'));
+var BPromise = require('bluebird');
+var request = BPromise.promisify(require('request'));
 
 var JXT = require('jxt').createRegistry();
 
@@ -25,13 +25,13 @@ module.exports = function (opts, cb) {
 
     var scheme = config.ssl ? 'https://' : 'http://';
 
-    var getJSON = new Promise(function (resolve, reject) {
+    var getJSON = new BPromise(function (resolve, reject) {
         request(scheme + config.host + '/.well-known/host-meta.json').spread(function (req, body) {
             resolve(JSON.parse(body));
         }).catch(reject);
     });
 
-    var getXRD = new Promise(function (resolve, reject) {
+    var getXRD = new BPromise(function (resolve, reject) {
         request(scheme + config.host + '/.well-known/host-meta').spread(function (req, body) {
             var xrd = JXT.parse(body);
             resolve(xrd.toJSON());
@@ -39,8 +39,8 @@ module.exports = function (opts, cb) {
     });
 
 
-    return new Promise(function (resolve, reject) {
-        Promise.some([getJSON, getXRD], 1).spread(resolve).catch(function () {
+    return new BPromise(function (resolve, reject) {
+        BPromise.some([getJSON, getXRD], 1).spread(resolve).catch(function () {
             reject('no-host-meta');
         });
     }).nodeify(cb);
