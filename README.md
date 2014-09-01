@@ -2,10 +2,10 @@
 
 [![Version](http://img.shields.io/npm/v/hostmeta.svg)](https://npmjs.org/package/hostmeta)
 [![Downloads](http://img.shields.io/npm/dm/hostmeta.svg)](https://npmjs.org/package/hostmeta)
-[![Build Status](http://img.shields.io/travis/otalk/hostmeta.js.svg)](https://travis-ci.org/otalk/hostmeta)
-[![Dependency Status](http://img.shields.io/david/otalk/hostmeta.js.svg)](https://david-dm.org/otalk/hostmeta)
+[![Build Status](http://img.shields.io/travis/otalk/hostmeta.js.svg)](https://travis-ci.org/otalk/hostmeta.js)
+[![Dependency Status](http://img.shields.io/david/otalk/hostmeta.js.svg)](https://david-dm.org/otalk/hostmeta.js)
 
-[![Browser Support](https://ci.testling.com/otalk/hostmeta.js.png)](https://ci.testling.com/otalk/hostmeta)
+[![Browser Support](https://ci.testling.com/otalk/hostmeta.js.png)](https://ci.testling.com/otalk/hostmeta.js)
 
 ## What is this?
 
