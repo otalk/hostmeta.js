@@ -11,17 +11,17 @@
   ],
   "dependencies": {
     "bluebird": "^2.3.2",
-    "browser-request": "0.3.1",
-    "jxt": "^2.0.2",
-    "request": "^2.34.0"
+    "browser-request": "^0.3.2",
+    "jxt": "^2.5.3",
+    "request": "^2.40.0"
   },
   "devDependencies": {
     "browserify": "^5.11.0",
     "nsp": "^0.2.3",
-    "precommit-hook": "^1.0.2",
+    "precommit-hook": "^1.0.7",
     "tap-spec": "^0.2.1",
-    "tape": "^2.13.3",
-    "uglify-js": "^2.4.14"
+    "tape": "^2.14.0",
+    "uglify-js": "^2.4.15"
   },
   "keywords": [
     "well-known",
