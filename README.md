@@ -1,12 +1,11 @@
-# getHostMeta
-**Fetch and parse .well-known/host-meta**
+# getHostMeta - Fetch and parse .well-known/host-meta
 
-[![Build Status](https://travis-ci.org/otalk/hostmeta.js.png)](https://travis-ci.org/otalk/hostmeta.js)
-[![Dependency Status](https://david-dm.org/otalk/hostmeta.js.png)](https://david-dm.org/otalk/hostmeta.js)
-[![devDependency Status](https://david-dm.org/otalk/hostmeta.js/dev-status.png)](https://david-dm.org/otalk/hostmeta.js#info=devDependencies)
+[![Version](http://img.shields.io/npm/v/hostmeta.svg)](https://npmjs.org/package/hostmeta)
+[![Downloads](http://img.shields.io/npm/dm/hostmeta.svg)](https://npmjs.org/package/hostmeta)
+[![Build Status](http://img.shields.io/travis/otalk/hostmeta.svg)](https://travis-ci.org/otalk/hostmeta)
+[![Dependency Status](http://img.shields.io/david/otalk/hostmeta.svg)](https://david-dm.org/otalk/hostmeta)
 
-[![Browser Support](https://ci.testling.com/otalk/hostmeta.js.png)](https://ci.testling.com/otalk/hostmeta.js)
-
+[![Browser Support](https://ci.testling.com/otalk/hostmeta.png)](https://ci.testling.com/otalk/hostmeta)
 
 ## What is this?
 
@@ -21,7 +20,7 @@ $ npm install hostmeta
 ## Building bundled/minified version (for AMD, etc)
 
 ```sh
-$ grunt
+$ make build
 ```
 
 The bundled and minified files will be in the generated `build` directory.
