@@ -1,7 +1,7 @@
 {
   "name": "hostmeta",
   "description": "Easily retrieve and parse a host's .well-known/host-meta file",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "browser": {
     "request": "xhr"
   },
