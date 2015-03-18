@@ -1,10 +1,10 @@
+include node_modules/make-better/core.inc
+
 NAME = hostmeta
 STANDALONE = getHostMeta
 MAIN = index.js
 
-SHELL = /bin/bash
-PATH := ./node_modules/.bin:$(PATH)
-LIB = $(shell find lib -name '*.js')
+LIB = $(call find_recursive,lib,*.js)
 
 
 # -- Tasks ------------------------------------------------------------
@@ -35,7 +35,7 @@ build/$(NAME).zip: build/$(NAME).bundle.js build/$(NAME).bundle.min.js
 
 build/$(NAME).bundle.js: $(MAIN) $(LIB)
 	mkdir -p build
-	browserify --standalone $(STANDALONE) $(MAIN) > $@
+	browserify --full-paths --standalone $(STANDALONE) $(MAIN) > $@
 
 build/$(NAME).bundle.min.js: build/$(NAME).bundle.js
 	uglifyjs --screw-ie8 build/$(NAME).bundle.js > $@

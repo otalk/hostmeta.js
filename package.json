@@ -3,7 +3,7 @@
   "description": "Easily retrieve and parse a host's .well-known/host-meta file",
   "version": "1.2.1",
   "browser": {
-    "request": "browser-request"
+    "request": "xhr"
   },
   "bugs": "https://github.com/otalk/hostmeta.js/issues",
   "contributors": [
@@ -11,13 +11,14 @@
   ],
   "dependencies": {
     "async": "^0.9.0",
-    "bluebird": "^2.3.2",
-    "browser-request": "^0.3.2",
-    "jxt": "^2.5.3",
-    "request": "^2.40.0"
+    "jxt": "^3.0.1",
+    "request": "^2.53.0",
+    "xhr": "^2.0.1"
   },
   "devDependencies": {
     "browserify": "^5.11.0",
+    "jshint": "^2.6.3",
+    "make-better": "^0.4.1",
     "nsp": "^0.2.3",
     "precommit-hook": "^1.0.7",
     "tap-spec": "^0.2.1",
